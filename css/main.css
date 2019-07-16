@@ -6,6 +6,11 @@ body{font-family: Helvetica, Arial, sans-serif; font-size: 16px;}
   max-width: 1200px;
 }
 
+.mainHeader{
+  display: flex;
+}
+
+
 .box{
   background-color: #8ea86e;
   color: #fff;
@@ -16,10 +21,28 @@ body{font-family: Helvetica, Arial, sans-serif; font-size: 16px;}
 }
 
 .logo{
-  width: 100px;
-  margin-left: auto;
-  margin-right:auto;
+  width: 50px;
+display: inline-block;
  }
+
+ #burgerCon{
+   margin-bottom: 20px;
+   position: fixed;
+   top: 85px;
+   width: 100%;
+ background-color: rgba(255, 255, 255, 0.8);
+
+
+ /* This should be off by default and toggled on wirth JS*/
+display: none;
+}
+
+.show-mobile-nav {
+  display: block !important;}
+
+ #burgerCon li{padding: 20px; border-top: thin solid black; text-align: center;}
+
+ #burgerCon a{ text-decoration: none; color: #8ea86e; }
 
  @media screen and (min-width: 600px) {
   #mainHeader {
@@ -29,7 +52,8 @@ body{font-family: Helvetica, Arial, sans-serif; font-size: 16px;}
 
 .box{flex: 1 1 auto; }
 
-.nav{flex: 0 1 600px; }
+.nav{flex: 0 1 600px;
+float: right;}
 
   .logo{
     order: -1;
